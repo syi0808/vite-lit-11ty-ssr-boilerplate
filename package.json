@@ -1,0 +1,41 @@
+{
+  "name": "vite-11ty-lit",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"yarn run start:vite\" \"yarn run start:eleventy\"",
+    "start:vite": "vite build --watch",
+    "start:eleventy": "yarn run serve",
+    "watch": "eleventy --config=eleventy.cjs --watch",
+    "serve": "eleventy --config=eleventy.cjs --serve",
+    "bench": "DEBUG=Eleventy:Benchmark* eleventy --config=eleventy.cjs",
+    "build": "yarn build:vite && yarn build:eleventy",
+    "build:eleventy": "eleventy --config=eleventy.cjs",
+    "build:vite": "tsc && vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@11ty/is-land": "^4.0.0",
+    "@lit-labs/ssr-client": "^1.1.7",
+    "@vaadin/router": "^1.7.5",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@lit-labs/eleventy-plugin-lit": "^1.0.3",
+    "@types/html-minifier": "^4",
+    "@webcomponents/custom-elements": "^1.6.0",
+    "@webcomponents/template-shadowroot": "^0.2.1",
+    "autoprefixer": "^10.4.19",
+    "clean-css": "^5.3.3",
+    "concurrently": "^8.2.2",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.38",
+    "terser": "^5.31.1",
+    "tiny-glob": "^0.2.9",
+    "typescript": "^5.4.2",
+    "vite": "^5.2.0"
+  },
+  "packageManager": "yarn@4.3.0"
+}

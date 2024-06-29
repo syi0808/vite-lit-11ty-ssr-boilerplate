@@ -1,0 +1,10 @@
+{% extends 'default.html' %} {% block head %}
+<script type="module" src="/js/pages/about/page.js"></script>
+{% endblock %} {% block content %}
+
+<about-page></about-page>
+<lit-island on:interaction="pointerenter" import="/js/hydration-entrypoints/about/index.js">
+    <client-component></client-component>
+</lit-island>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+/* This is for global styles! loaded in site/_includes/default.html */
+
+:root {
+  --primary-color: #006e18;
+  --on-primary-color: #ffffff;
+  --secondary-container: #d6e8ce;
+  --on-secondary-container: #111f0f;
+}
+
+body {
+  padding: 0;
+}
+
+[dsd-pending] {
+  display: none;
+}

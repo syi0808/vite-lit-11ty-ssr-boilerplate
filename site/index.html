@@ -1,0 +1,9 @@
+{% extends 'default.html' %} {% block head %}
+<script type="module" src="/js/pages/page.js"></script>
+<link rel="stylesheet" href="/css/home-page.css" />
+{% endblock %} {% block content %}
+<lit-island on:interaction="pointerenter" import="/js/hydration-entrypoints/index.js">
+    <home-page></home-page>
+</lit-island>
+
+{% endblock %}

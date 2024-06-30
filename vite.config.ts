@@ -51,10 +51,13 @@ export default defineConfig({
   },
   build: {
     minify: 'terser',
-    terserOptions: {
-      compress: true,
-      mangle: true,
-    },
+    terserOptions:
+      process.env.NODE === 'production'
+        ? {
+            compress: true,
+            mangle: true,
+          }
+        : {},
     outDir: 'lib',
     emptyOutDir: false,
     lib: {

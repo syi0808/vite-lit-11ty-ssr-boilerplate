@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
 
   minifyHTML(eleventyConfig, isDEV);
 
+  eleventyConfig.setServerPassthroughCopyBehavior('passthrough');
+
   return {
     htmlTemplateEngine: 'njk',
     dir: {
